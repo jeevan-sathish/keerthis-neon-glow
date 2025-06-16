@@ -19,7 +19,7 @@ const WishCard = () => {
             </div>
 
             {/* Wish Text */}
-            <div className="text-center space-y-6">
+            <div className="text-center space-y-6 relative z-10">
               <h3 className="text-3xl font-pacifico bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-8 animate-neon-pulse">
                 Birthday Wishes
               </h3>
@@ -41,15 +41,15 @@ const WishCard = () => {
               </p>
             </div>
 
-            {/* Floating Hearts */}
+            {/* Limited Floating Hearts - positioned at edges only */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {[...Array(8)].map((_, i) => (
+              {[...Array(4)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute text-pink-400 text-xl animate-pulse"
+                  className="absolute text-pink-400 text-lg animate-pulse"
                   style={{
-                    left: `${10 + Math.random() * 80}%`,
-                    top: `${10 + Math.random() * 80}%`,
+                    left: `${i < 2 ? 5 + Math.random() * 10 : 85 + Math.random() * 10}%`, // Keep to edges
+                    top: `${20 + Math.random() * 60}%`,
                     animationDelay: `${Math.random() * 3}s`,
                     animationDuration: `${2 + Math.random() * 2}s`
                   }}

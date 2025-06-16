@@ -4,6 +4,7 @@ import ProfileCard from './ProfileCard';
 import Navigation from './Navigation';
 import WishCard from './WishCard';
 import FromSection from './FromSection';
+import Footer from './Footer';
 
 const BirthdayPage = () => {
   const [candleBlown, setCandleBlown] = useState(false);
@@ -13,31 +14,16 @@ const BirthdayPage = () => {
   // Audio placeholder - replace with your audio file path later
   const AUDIO_FILE_PATH = "/path/to/your/birthday-song.mp3"; // TODO: Replace with actual audio file path
 
-  useEffect(() => {
-    // Attempt to autoplay audio when component mounts
-    const playAudio = async () => {
-      if (audioRef.current) {
-        try {
-          await audioRef.current.play();
-        } catch (error) {
-          console.log("Autoplay was prevented by browser:", error);
-          // Fallback: play on first user interaction
-          const handleFirstInteraction = () => {
-            audioRef.current?.play();
-            document.removeEventListener('click', handleFirstInteraction);
-            document.removeEventListener('touch', handleFirstInteraction);
-          };
-          document.addEventListener('click', handleFirstInteraction);
-          document.addEventListener('touch', handleFirstInteraction);
-        }
-      }
-    };
-
-    playAudio();
-  }, []);
-
   const handleCandleBlow = () => {
     setCandleBlown(true);
+    
+    // Play audio after candle is blown
+    if (audioRef.current) {
+      audioRef.current.play().catch(error => {
+        console.log("Audio playback failed:", error);
+      });
+    }
+    
     setTimeout(() => {
       setShowCelebration(true);
     }, 2000);
@@ -60,14 +46,14 @@ const BirthdayPage = () => {
       {/* Animated Background */}
       <div className="fixed inset-0 bg-gradient-to-br from-purple-900/30 via-black to-pink-900/30"></div>
       
-      {/* Floating Sparkles */}
+      {/* Reduced Floating Sparkles - positioned away from content */}
       <div className="fixed inset-0 pointer-events-none">
-        {[...Array(40)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-yellow-400 to-pink-400 rounded-full animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
+              left: `${Math.random() < 0.3 ? Math.random() * 20 : 80 + Math.random() * 20}%`, // Keep to edges
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 4}s`,
               animationDuration: `${1 + Math.random() * 3}s`
@@ -86,7 +72,7 @@ const BirthdayPage = () => {
           
           {/* Celebration Title - Shows after candle is blown */}
           {showCelebration && (
-            <div className="mt-16 animate-fade-in">
+            <div className="mt-16 animate-fade-in relative z-20">
               <h1 className="text-4xl md:text-6xl font-pacifico bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-6 animate-neon-pulse">
                 ✨ Many More Happy Returns of the Day
               </h1>
@@ -94,15 +80,15 @@ const BirthdayPage = () => {
                 Keerthi (Keerthana)!
               </h2>
               
-              {/* Floating Butterflies */}
+              {/* Limited Floating Butterflies - positioned away from text */}
               <div className="absolute inset-0 pointer-events-none">
-                {[...Array(8)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className="absolute text-3xl animate-bounce"
+                    className="absolute text-2xl animate-bounce"
                     style={{
-                      left: `${20 + Math.random() * 60}%`,
-                      top: `${20 + Math.random() * 60}%`,
+                      left: `${i < 2 ? 10 + Math.random() * 15 : 75 + Math.random() * 15}%`, // Keep to sides
+                      top: `${20 + Math.random() * 20}%`,
                       animationDelay: `${Math.random() * 2}s`,
                       animationDuration: `${2 + Math.random() * 2}s`
                     }}
@@ -128,6 +114,11 @@ const BirthdayPage = () => {
         <div id="from" className="relative z-10 py-20">
           <FromSection />
         </div>
+      )}
+
+      {/* Footer - Only show after celebration */}
+      {showCelebration && (
+        <Footer />
       )}
     </div>
   );

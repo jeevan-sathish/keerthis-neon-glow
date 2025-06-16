@@ -21,7 +21,7 @@ const ProfileCard = ({ onCandleBlow, candleBlown }: ProfileCardProps) => {
   return (
     <div className="relative pt-20">
       {/* Profile Image */}
-      <div className="mb-8 relative">
+      <div className="mb-8 relative z-20">
         <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-pink-400 via-purple-400 to-blue-400 p-1 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 animate-pulse">
           <img
             src="/lovable-uploads/c5f6d190-f436-4768-a83d-b9aaa2eae783.png"
@@ -35,7 +35,7 @@ const ProfileCard = ({ onCandleBlow, candleBlown }: ProfileCardProps) => {
       </div>
 
       {/* Realistic Cake with Candle */}
-      <div className="relative mb-8">
+      <div className="relative mb-8 z-10">
         {/* Cake Base */}
         <div className="relative inline-block">
           <div className="text-6xl mb-2">🎂</div>
@@ -106,22 +106,22 @@ const ProfileCard = ({ onCandleBlow, candleBlown }: ProfileCardProps) => {
         )}
       </div>
 
-      {/* Enhanced Confetti Effect */}
+      {/* Limited Confetti Effect - positioned away from text and image */}
       {showConfetti && (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(30)].map((_, i) => (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-5">
+          {[...Array(15)].map((_, i) => (
             <div
               key={i}
-              className="absolute text-2xl animate-bounce"
+              className="absolute text-lg animate-bounce"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${10 + Math.random() * 80}%`,
+                top: `${60 + Math.random() * 30}%`, // Keep confetti in lower area
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${1 + Math.random() * 2}s`,
                 color: ['#ff69b4', '#9d4edd', '#06ffa5', '#ffb300', '#ff6b6b'][Math.floor(Math.random() * 5)]
               }}
             >
-              {['✨', '🎉', '🎊', '💖', '🌟', '🦋', '💫', '🎈'][Math.floor(Math.random() * 8)]}
+              {['✨', '🎉', '🎊', '💖', '🌟'][Math.floor(Math.random() * 5)]}
             </div>
           ))}
         </div>

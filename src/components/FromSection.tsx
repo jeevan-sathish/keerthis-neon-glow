@@ -10,14 +10,14 @@ const FromSection = () => {
           
           {/* Main Card */}
           <div className="relative bg-black border border-orange-500/30 rounded-xl p-10 backdrop-blur-sm">
-            {/* Floating Sparkles */}
+            {/* Limited Floating Sparkles - positioned at edges only */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {[...Array(12)].map((_, i) => (
+              {[...Array(6)].map((_, i) => (
                 <div
                   key={i}
                   className="absolute text-yellow-400 text-sm animate-pulse"
                   style={{
-                    left: `${Math.random() * 100}%`,
+                    left: `${i < 3 ? Math.random() * 15 : 85 + Math.random() * 15}%`, // Keep to edges
                     top: `${Math.random() * 100}%`,
                     animationDelay: `${Math.random() * 4}s`,
                     animationDuration: `${1 + Math.random() * 3}s`
@@ -36,7 +36,7 @@ const FromSection = () => {
             </div>
 
             {/* Message Content */}
-            <div className="space-y-6 text-white font-poppins leading-relaxed">
+            <div className="space-y-6 text-white font-poppins leading-relaxed relative z-10">
               <p className="text-xl font-semibold">
                 🧡 <span className="text-orange-400 font-bold">From your well-wisher,</span>
               </p>
