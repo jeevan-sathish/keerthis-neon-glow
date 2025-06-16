@@ -22,7 +22,7 @@ const ProfileCard = ({ onCandleBlow, candleBlown }: ProfileCardProps) => {
     <div className="relative pt-20">
       {/* Profile Image */}
       <div className="mb-8 relative z-20">
-        <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-pink-400 via-purple-400 to-blue-400 p-1 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 animate-pulse">
+        <div className="w-[430px] h-[550px] mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-pink-400 via-purple-400 to-blue-400 p-1 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 animate-pulse">
           <img
             src="/lovable-uploads/17091394-789d-437f-9412-8111a8a9e098.png"
             alt="Keerthi"
@@ -31,7 +31,7 @@ const ProfileCard = ({ onCandleBlow, candleBlown }: ProfileCardProps) => {
         </div>
         
         {/* Glowing Ring Effect */}
-        <div className="absolute inset-0 w-48 h-48 mx-auto rounded-full border-2 border-pink-400 animate-ping opacity-30"></div>
+        <div className="absolute inset-0 w-[350px] h-[450px] mx-auto rounded-full border-2 border-pink-400 animate-ping opacity-30"></div>
       </div>
 
       {/* Realistic Cake with Candle */}

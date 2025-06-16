@@ -72,6 +72,10 @@ const FromSection = () => {
               <p className="text-2xl text-center mt-10 font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent font-pacifico animate-neon-pulse">
                 Once again, a very Happy Birthday Keerthi... 🎂
               </p>
+
+              <p className="text-lg text-red-700 font-bold align-middle italic border-l-4 border-red-600 pl-4">
+                JUST 5 hours TO BUILD THIS FOR YOUR BIRTHDAY. <span className="font-bold text-blue-600">Is this unique and special.?</span>
+              </p>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import FromSection from './FromSection';
 import QuoteReply from './QuoteReply';
 import Footer from './Footer';
 
-const song = "/songkee.mp3";
+const song = "/chalisuva.mp3";
 
 const BirthdayPage = () => {
   const [candleBlown, setCandleBlown] = useState(false);
@@ -68,11 +68,11 @@ const BirthdayPage = () => {
 
           {showCelebration && (
             <div className="mt-16 animate-fade-in relative z-20">
-              <h1 className="text-4xl md:text-6xl font-pacifico bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-6 animate-neon-pulse">
+              <h1 className="text-6xl md:text-6xl font-pacifico bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-6 animate-neon-pulse">
                 ✨ Many More Happy Returns of the Day
               </h1>
-              <h2 className="text-3xl md:text-5xl font-pacifico bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-neon-pulse">
-                Keerthi (Keerthana)!
+              <h2 className="text-4xl md:text-5xl font-pacifico bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-neon-pulse">
+                Keerthi (Keerthana)
               </h2>
 
               {/* Floating Butterflies */}
