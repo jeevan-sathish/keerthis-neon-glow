@@ -24,7 +24,7 @@ const ProfileCard = ({ onCandleBlow, candleBlown }: ProfileCardProps) => {
       <div className="mb-8 relative z-20">
         <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-pink-400 via-purple-400 to-blue-400 p-1 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 animate-pulse">
           <img
-            src="/lovable-uploads/c5f6d190-f436-4768-a83d-b9aaa2eae783.png"
+            src="/lovable-uploads/17091394-789d-437f-9412-8111a8a9e098.png"
             alt="Keerthi"
             className="w-full h-full object-cover rounded-full bg-black"
           />

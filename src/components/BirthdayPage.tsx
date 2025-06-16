@@ -103,30 +103,32 @@ const BirthdayPage = () => {
         </div>
       </div>
 
-      {/* Wish Section - Only show after celebration */}
+      {/* Wish Section - Only show after celebration with reduced spacing */}
       {showCelebration && (
-        <div id="wish" className="relative z-10 py-20">
+        <div id="wish" className="relative z-10 py-8">
           <WishCard />
         </div>
       )}
 
-      {/* From Section - Only show after celebration */}
+      {/* From Section - Only show after celebration with reduced spacing */}
       {showCelebration && (
-        <div id="from" className="relative z-10 py-20">
+        <div id="from" className="relative z-10 py-8">
           <FromSection />
         </div>
       )}
 
-      {/* Quote Reply Section - Only show after celebration */}
+      {/* Quote Reply Section - Only show after celebration with reduced spacing */}
       {showCelebration && (
-        <div className="relative z-10">
+        <div className="relative z-10 py-8">
           <QuoteReply />
         </div>
       )}
 
-      {/* Footer - Only show after celebration */}
+      {/* Footer - Only show after celebration with reduced spacing */}
       {showCelebration && (
-        <Footer />
+        <div className="relative z-10 py-8">
+          <Footer />
+        </div>
       )}
     </div>
   );
