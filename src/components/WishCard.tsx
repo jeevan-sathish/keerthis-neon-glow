@@ -19,31 +19,31 @@ const WishCard = () => {
             </div>
 
             {/* Wish Text */}
-            <div className="text-center space-y-4">
-              <h3 className="text-2xl font-pacifico bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <div className="text-center space-y-6">
+              <h3 className="text-3xl font-pacifico bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-8 animate-neon-pulse">
                 Birthday Wishes
               </h3>
               
-              <p className="text-lg font-poppins text-white leading-relaxed">
-                💖 <span className="text-pink-400 font-semibold">Many more happy returns of the day Keerthi</span> 💗
+              <p className="text-xl font-poppins font-medium text-white leading-relaxed tracking-wide">
+                💖 <span className="text-pink-400 font-bold text-shadow-pink">Many more happy returns of the day Keerthi</span> 💗
               </p>
               
-              <p className="text-lg font-poppins text-white leading-relaxed">
+              <p className="text-lg font-dancing font-semibold text-purple-300 leading-relaxed italic">
                 Stay blessed, stay khush,
               </p>
               
-              <p className="text-lg font-poppins text-white leading-relaxed">
+              <p className="text-lg font-dancing font-semibold text-blue-300 leading-relaxed italic">
                 May your smile last infinite.
               </p>
               
-              <p className="text-lg font-poppins text-white leading-relaxed mt-6 text-blue-300">
-                All the best for your 6th Sem final exams too – do it well!
+              <p className="text-lg font-poppins font-medium text-cyan-300 leading-relaxed mt-8 border border-cyan-500/30 rounded-lg p-4 bg-cyan-900/20">
+                All the best for your 6th Sem final exams too – do it well! ✨
               </p>
             </div>
 
             {/* Floating Hearts */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {[...Array(6)].map((_, i) => (
+              {[...Array(8)].map((_, i) => (
                 <div
                   key={i}
                   className="absolute text-pink-400 text-xl animate-pulse"

@@ -12,7 +12,7 @@ const FromSection = () => {
           <div className="relative bg-black border border-orange-500/30 rounded-xl p-10 backdrop-blur-sm">
             {/* Floating Sparkles */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {[...Array(8)].map((_, i) => (
+              {[...Array(12)].map((_, i) => (
                 <div
                   key={i}
                   className="absolute text-yellow-400 text-sm animate-pulse"
@@ -30,46 +30,46 @@ const FromSection = () => {
 
             {/* From Header */}
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-pacifico bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+              <h3 className="text-4xl font-pacifico bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent animate-neon-pulse">
                 With Love
               </h3>
             </div>
 
             {/* Message Content */}
             <div className="space-y-6 text-white font-poppins leading-relaxed">
-              <p className="text-lg">
-                🧡 <span className="text-orange-400 font-semibold">From your well-wisher,</span>
+              <p className="text-xl font-semibold">
+                🧡 <span className="text-orange-400 font-bold">From your well-wisher,</span>
               </p>
               
-              <p className="text-lg">
-                <span className="text-pink-300">Jeevan</span> – the irritating, worst fellow of your BE 2022 batch 😑
+              <p className="text-lg font-medium">
+                <span className="text-pink-300 font-bold text-xl">Jeevan</span> – <span className="font-dancing text-lg italic">the irritating, worst fellow of your BE 2022 batch</span> 😑
               </p>
               
-              <p className="text-lg text-blue-300">
-                It's been 3 years we've been friends, and strangers too.
+              <p className="text-lg text-blue-300 font-medium italic border-l-4 border-blue-500 pl-4">
+                It's been 3 years we've been friends, <span className="font-bold">and strangers too.</span>
               </p>
               
-              <p className="text-lg text-purple-300">
-                But I've always been your well-wisher.
+              <p className="text-lg text-purple-300 font-semibold">
+                But I've always been your <span className="text-purple-200 font-bold">well-wisher.</span>
               </p>
               
-              <p className="text-lg text-pink-300">
-                I'm the happiest when I see you smiling.
+              <p className="text-lg text-pink-300 font-medium bg-pink-900/20 p-3 rounded-lg border border-pink-500/30">
+                I'm the <span className="font-bold text-pink-200">happiest</span> when I see you <span className="font-bold text-yellow-300">smiling.</span>
               </p>
               
-              <p className="text-lg text-cyan-300">
-                Maybe I'll be there in the upcoming years, maybe not.
+              <p className="text-lg text-cyan-300 font-medium italic">
+                Maybe I'll be there in the upcoming years, <span className="font-bold">maybe not.</span>
               </p>
               
-              <p className="text-lg text-yellow-300">
-                But my intentions and heart for you are true.
+              <p className="text-lg text-yellow-300 font-semibold border border-yellow-500/30 p-3 rounded-lg bg-yellow-900/20">
+                But my <span className="font-bold text-yellow-200">intentions</span> and <span className="font-bold text-red-300">heart</span> for you are <span className="font-bold text-green-300">true.</span>
               </p>
               
-              <p className="text-lg text-green-300">
-                These days, I believe in silence and presence.
+              <p className="text-lg text-green-300 font-medium italic">
+                These days, I believe in <span className="font-bold">silence</span> and <span className="font-bold">presence.</span>
               </p>
               
-              <p className="text-xl text-center mt-8 font-semibold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <p className="text-2xl text-center mt-10 font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent font-pacifico animate-neon-pulse">
                 Once again, a very Happy Birthday Keerthi... 🎂
               </p>
             </div>
