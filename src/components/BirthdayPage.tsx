@@ -4,6 +4,7 @@ import ProfileCard from './ProfileCard';
 import Navigation from './Navigation';
 import WishCard from './WishCard';
 import FromSection from './FromSection';
+import QuoteReply from './QuoteReply';
 import Footer from './Footer';
 
 const BirthdayPage = () => {
@@ -113,6 +114,13 @@ const BirthdayPage = () => {
       {showCelebration && (
         <div id="from" className="relative z-10 py-20">
           <FromSection />
+        </div>
+      )}
+
+      {/* Quote Reply Section - Only show after celebration */}
+      {showCelebration && (
+        <div className="relative z-10">
+          <QuoteReply />
         </div>
       )}
 
