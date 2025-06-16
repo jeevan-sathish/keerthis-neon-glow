@@ -38,6 +38,7 @@ const WishCard = () => {
               
               <p className="text-lg font-poppins font-medium text-cyan-300 leading-relaxed mt-8 border border-cyan-500/30 rounded-lg p-4 bg-cyan-900/20">
                 All the best for your 6th Sem final exams too – do it well! ✨
+                ಚೆನ್ನಾಗಿ ಬರಿ ಎಕ್ಸಾಮ್ ನಾ..☺️
               </p>
             </div>
 
